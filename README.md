@@ -7,7 +7,7 @@
 
 
  <img align="left" height="70" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
- 
+  
 <br>
 
 💬 **▸ Socials & Contacts:**
