@@ -142,6 +142,11 @@ The map below is **interactive**: zoom in and click a dot to see each municipali
 <br/>
 
 <!--START_SECTION:activity-->
+1. 🔨 Pushed 1 commit to [gabrielSallesSi/dewlune](https://github.com/gabrielSallesSi/dewlune) <sub>· Nov 7, 2026</sub>
+2. 🔨 Pushed 1 commit to [gabrielSallesSi/tamarack-shopify-theme](https://github.com/gabrielSallesSi/tamarack-shopify-theme) <sub>· Nov 4, 2026</sub>
+3. 🔀 Opened a pull request in [gabrielSallesSi/tamarack-shopify-theme](https://github.com/gabrielSallesSi/tamarack-shopify-theme) <sub>· Nov 4, 2026</sub>
+
+<sub>Last updated: Nov 10, 2026</sub>
 <!--END_SECTION:activity-->
 
 </details>
