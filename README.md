@@ -12,7 +12,7 @@
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabrielsadasilveira@gmail.com)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5562993844474)
 
-<sub>🇺🇸 English below · 🇧🇷 [Versão em português](#-em-português)</sub>
+<sub>English below · 💬 <a href="#-em-português">Versão em português</a></sub>
 
 </div>
 
@@ -20,15 +20,15 @@
 
 ```ts
 const gabriel = {
-  role:      ["Front-end Developer", "E-commerce Developer", "ML for Agriculture"],
-  location:  "Anápolis, Goiás, Brazil 🇧🇷  ·  open to remote",
-  building:  ["Shopify themes", "WooCommerce + Stripe checkouts", "React data apps"],
+  role:      ["Front-end Dev", "E-commerce Dev", "ML for Agriculture"],
+  location:  "Anápolis, Brazil · open to remote",
+  building:  ["Shopify themes", "WooCommerce + Stripe", "React data apps"],
   education: {
-    msc: "Agricultural Engineering, UEG (soybean yield prediction with ML)",
-    mba: "Technology for Business: AI, Data Science & Big Data, PUCRS",
+    msc: "Agricultural Engineering, UEG",
+    mba: "AI, Data Science & Big Data, PUCRS",
     cs50: "Harvard CS50",
   },
-  languages: ["Portuguese (native)", "English (full professional)", "Spanish (basic)"],
+  languages: ["Portuguese", "English", "Spanish (basic)"],
 };
 ```
 
@@ -153,7 +153,7 @@ The map below is **interactive**: zoom in and click a dot to see each municipali
 
 ---
 
-## 🇧🇷 Em português
+## 💬 Em português
 
 <details>
 <summary><b>Clique para ler a versão em português</b></summary>
