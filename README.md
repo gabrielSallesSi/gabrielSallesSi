@@ -127,7 +127,7 @@ The map below is **interactive**: zoom in and click a dot to see each municipali
 <img height="165" src="https://streak-stats.demolab.com?user=gabrielSallesSi&background=0C110E&border=1C261F&stroke=1C261F&ring=E9C46A&fire=E9C46A&currStreakNum=FAFAF9&sideNums=FAFAF9&currStreakLabel=E9C46A&sideLabels=A8A29E&dates=78716C&border_radius=12" alt="GitHub streak" />
 <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=gabrielSallesSi&theme=github_dark" alt="Top languages" />
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=gabrielSallesSi&bg_color=0c110e&color=a8a29e&line=e9c46a&point=7bd389&area=true&area_color=e9c46a&hide_border=true&radius=12" alt="Contribution graph" />
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=gabrielSallesSi&theme=github_dark" alt="Contribution history" />
 
 </div>
 
