@@ -12,9 +12,53 @@ jobs:
   activity:
     runs-on: ubuntu-latest
     steps:
-      - uses: jamesgeorge007/github-activity-readme@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+      - name: Build activity list
+        uses: actions/github-script@v7
         with:
-          COMMIT_MSG: "chore: update recent activity"
-          MAX_LINES: 6
+          script: |
+            const fs = require("fs");
+            const user = context.repo.owner;
+            const self = `${user}/${user}`.toLowerCase();
+            const { data: events } = await github.rest.activity.listPublicEventsForUser({ username: user, per_page: 100 });
+            const fmt = (d) => new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+            const link = (r) => `[${r}](https://github.com/${r})`;
+            const lines = [];
+            const seen = new Set();
+            for (const e of events) {
+              if (e.repo.name.toLowerCase() === self) continue;
+              let text = null;
+              if (e.type === "PushEvent") {
+                const n = e.payload.size ?? e.payload.commits?.length ?? 1;
+                text = `🔨 Pushed ${n} commit${n === 1 ? "" : "s"} to ${link(e.repo.name)}`;
+              } else if (e.type === "CreateEvent" && e.payload.ref_type === "repository") {
+                text = `🆕 Created ${link(e.repo.name)}`;
+              } else if (e.type === "PullRequestEvent") {
+                text = `🔀 ${e.payload.action === "closed" && e.payload.pull_request.merged ? "Merged" : "Opened"} a pull request in ${link(e.repo.name)}`;
+              } else if (e.type === "ReleaseEvent") {
+                text = `🏷️ Released ${e.payload.release.tag_name} of ${link(e.repo.name)}`;
+              } else if (e.type === "WatchEvent") {
+                text = `⭐ Starred ${link(e.repo.name)}`;
+              } else if (e.type === "ForkEvent") {
+                text = `🍴 Forked ${link(e.repo.name)}`;
+              }
+              if (!text) continue;
+              const key = `${text}|${fmt(e.created_at)}`;
+              if (seen.has(key)) continue;
+              seen.add(key);
+              lines.push(`${lines.length + 1}. ${text} <sub>· ${fmt(e.created_at)}</sub>`);
+              if (lines.length >= 8) break;
+            }
+            if (!lines.length) lines.push("_No public activity in the last 90 days._");
+            const block = `<!--START_SECTION:activity-->\n${lines.join("\n")}\n\n<sub>Last updated: ${fmt(new Date())}</sub>\n<!--END_SECTION:activity-->`;
+            const readme = fs.readFileSync("README.md", "utf8");
+            const next = readme.replace(/<!--START_SECTION:activity-->[\s\S]*?<!--END_SECTION:activity-->/, block);
+            fs.writeFileSync("README.md", next);
+            core.info(lines.join("\n"));
+      - name: Commit
+        run: |
+          if git diff --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: update recent activity"
+          git push
