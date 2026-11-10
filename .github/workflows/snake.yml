@@ -1,0 +1,30 @@
+name: Generate snake animation
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#b8860b&color_dots=#ebedf0,#c6e48b,#7bc96f,#239a3b,#196127
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#e9c46a&color_dots=#161b22,#1c3a2a,#2d6a4f,#52a370,#7bd389
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: update snake animation"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
