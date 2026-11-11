@@ -142,11 +142,12 @@ The map below is **interactive**: these are the 55 municipalities from my MSc re
 <br/>
 
 <!--START_SECTION:activity-->
-1. 🔨 Pushed 1 commit to [gabrielSallesSi/dewlune](https://github.com/gabrielSallesSi/dewlune) <sub>· Nov 7, 2026</sub>
-2. 🔨 Pushed 1 commit to [gabrielSallesSi/tamarack-shopify-theme](https://github.com/gabrielSallesSi/tamarack-shopify-theme) <sub>· Nov 4, 2026</sub>
-3. 🔀 Opened a pull request in [gabrielSallesSi/tamarack-shopify-theme](https://github.com/gabrielSallesSi/tamarack-shopify-theme) <sub>· Nov 4, 2026</sub>
+1. 🔨 Pushed 1 commit to [gabrielSallesSi/sojapredict-atlas](https://github.com/gabrielSallesSi/sojapredict-atlas) <sub>· Nov 10, 2026</sub>
+2. 🔨 Pushed 1 commit to [gabrielSallesSi/dewlune](https://github.com/gabrielSallesSi/dewlune) <sub>· Nov 7, 2026</sub>
+3. 🔨 Pushed 1 commit to [gabrielSallesSi/tamarack-shopify-theme](https://github.com/gabrielSallesSi/tamarack-shopify-theme) <sub>· Nov 4, 2026</sub>
+4. 🔀 Opened a pull request in [gabrielSallesSi/tamarack-shopify-theme](https://github.com/gabrielSallesSi/tamarack-shopify-theme) <sub>· Nov 4, 2026</sub>
 
-<sub>Last updated: Nov 10, 2026</sub>
+<sub>Last updated: Nov 11, 2026</sub>
 <!--END_SECTION:activity-->
 
 </details>
